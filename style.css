@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #350b78;
+  color: #202020;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  height: 170px;
+  padding: 30px 20px 24px;
+  text-align: center;
+  background: #350b78;
+  color: #fff;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.hero p {
+  margin: 12px 0 0;
+  font-size: 20px;
+  color: #f2eaff;
+}
+
+.navbar {
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  background: #293f50;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.navbar a:hover {
+  color: #d6d8ff;
+}
+
+.content {
+  width: 85%;
+  max-width: 1100px;
+  margin: 30px auto 53px;
+}
+
+.card {
+  background: #fffafa;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  padding: 22px 30px 25px 40px;
+  border-left: 11px solid #6678ee;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #667be9;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.about {
+  min-height: 270px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.about-text {
+  flex: 1;
+  padding-top: 1px;
+}
+
+.about-text p {
+  margin: 10px 0 0;
+  font-size: 20px;
+  line-height: 1.22;
+}
+
+.profile-photo {
+  display: block;
+  flex: 0 0 230px;
+  width: 230px;
+  height: 228px;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 12px;
+  border: 2px solid #e3e7f0;
+  background: #f6f7fb;
+}
+
+.projects {
+  min-height: 270px;
+  padding-top: 20px;
+}
+
+.projects h2 {
+  margin-bottom: 8px;
+}
+
+.project {
+  border-left: 6px solid #6678ee;
+  padding: 0 0 0 18px;
+  margin: 8px 0 19px 3px;
+}
+
+.project h3 {
+  margin: 0 0 2px;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.project p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.contact {
+  min-height: 162px;
+  padding-top: 17px;
+  margin-bottom: 0;
+}
+
+.contact h2 {
+  margin-bottom: 8px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 28px;
+  row-gap: 10px;
+  padding-left: 14px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 12px;
+  font-size: 18px;
+}
+
+.contact-row strong {
+  color: #293f50;
+}
+
+.contact-row a {
+  color: #202020;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #293f50;
+  color: #f4f5f7;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 23px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    width: calc(100% - 48px);
+  }
+
+  .navbar {
+    gap: clamp(24px, 8vw, 70px);
+  }
+
+  .about-text p {
+    font-size: 18px;
+  }
+
+  .profile-photo {
+    flex-basis: 190px;
+    width: 190px;
+    height: 210px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: auto;
+    padding: 30px 14px 28px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .navbar {
+    height: auto;
+    gap: 0;
+    justify-content: space-evenly;
+    padding: 15px 8px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .content {
+    width: calc(100% - 28px);
+    margin: 20px auto 30px;
+  }
+
+  .card {
+    padding: 20px 18px 22px 24px;
+    border-left-width: 7px;
+    margin-bottom: 18px;
+  }
+
+  .card h2 {
+    font-size: 27px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 230px;
+    height: 230px;
+    flex-basis: auto;
+    align-self: center;
+  }
+
+  .project h3 {
+    font-size: 16px;
+  }
+
+  .project p {
+    font-size: 14px;
+  }
+
+  .contact-row {
+    grid-template-columns: 85px minmax(0, 1fr);
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .contact-grid {
+    padding-left: 2px;
+  }
+
+  .footer p {
+    font-size: 17px;
+  }
+}
